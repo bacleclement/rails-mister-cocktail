@@ -1,4 +1,14 @@
-<%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="burger" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://media.giphy.com/media/Ox74vmm5DongQ/giphy.gif'); width: 500px; height: 600px;">
+      </div>
+    </div>
+    <div class="col-xs-6 col-xs-offset-3" style= "margin-top: 60px; margin-bottom: 40px;">
+      <%= simple_form_for [@cocktail] do |f| %>
+        <%= f.input :name %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
