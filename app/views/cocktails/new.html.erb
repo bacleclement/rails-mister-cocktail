@@ -1,10 +1,4 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.error_notification %>
-
-  <%= f.input :name, label: "Entrez le nom du cocktail"  %>
-  <%= f.input :ingredient, collection: { Ingredient.all } %>
-  <%= f.button :submit %>
-<% end %>
-
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.input :name %>
   <%= f.button :submit %>
 <% end %>
