@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <h1 class="title-home">Restaurants</h1>
+      <% @cocktails.each do |cocktail|%>
+        <div class="col-xs-4">
+          <div class="card" style="background-color: lightgrey;">
+            <div class="card-name">
+              <h2><%= cocktail.name %></h2>
+            </div>
+            <%= link_to "", (cocktail_path(cocktail)), class: "card-link"%>
+              <div class="product">
+                  <div class="product-star"> <i class="fa fa-star"></i></div>
+                  <div class='product-count'><%= rand(0..5) %> </div>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
