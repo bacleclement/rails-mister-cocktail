@@ -78,6 +78,7 @@
     transition: 0.3s;
     height: 600px;
     margin: 20px;
+    overflow-y: scroll;
   p {
     margin: 5px;
     padding-top: 5px;
@@ -115,4 +116,10 @@
     bottom: 5px;
     right: 5px;
   }
+}
+
+.separate {
+  background-color: lightgrey;
+  width: 600px;
+  height: 1px;
 }
