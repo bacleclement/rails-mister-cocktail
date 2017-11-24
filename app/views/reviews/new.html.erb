@@ -1,0 +1,24 @@
+<style type="text/css">
+
+body {
+  background-image: url('https://images1.ocweekly.com/imager/u/original/8116990/big_lebowski_13.jpg');
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+</style>
+
+<div class="container" style="margin: 140px;">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3" style= "margin-top: 60px; margin-bottom: 40px; color: white;">
+      <%= simple_form_for [@cocktail, @review] do |f| %>
+        <%= f.input :title %>
+        <%= f.input :content %>
+        <%= f.input :rating %>
+        <%= f.button :submit, class: "btn btn-treehouse", style: "margin-left: 200px;"  %>
+      <% end %>
+    </div>
+  </div>
+</div>

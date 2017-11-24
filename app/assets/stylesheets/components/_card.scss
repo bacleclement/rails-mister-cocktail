@@ -79,8 +79,8 @@
     height: 600px;
     margin: 20px;
   p {
-    margin: 20px;
-    padding-top: 30px;
+    margin: 5px;
+    padding-top: 5px;
   }
 }
 
@@ -94,11 +94,22 @@
 
 #ingredient {
   position: relative;
+  height: 300px;
   #delete {
     position: absolute;
     bottom: 5px;
     left: 5px;
   }
+  #add {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+#review {
+  position: relative;
+  height: 200px;
   #add {
     position: absolute;
     bottom: 5px;

@@ -31,17 +31,31 @@
         <% end %>
     </div>
     <div class="col-xs-3">
-      <div class="cocktail-card" id="ingredient" style="width: 500px;">
-      <% @cocktail.doses.each do |dose|%>
-        <p>
-          <i class="fa fa-hand-o-right" aria-hidden="true"></i> <%= dose.ingredient.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i> <%= dose.description %>
-        </p>
-        <br>
-        <%= link_to "Delete", dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}, id: "delete", class: "btn btn-danger" %>
-      <% end %>
-      <br>
-      <%= link_to "Add a ingredient", new_cocktail_dose_path(@cocktail), id: "add", class: "btn btn-success" %>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="cocktail-card" id="ingredient" style="width: 500px;">
+            <% @cocktail.doses.each do |dose|%>
+              <p>
+                <i class="fa fa-hand-o-right" aria-hidden="true"></i> <%= dose.ingredient.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i> <%= dose.description %>
+              </p>
+              <%= link_to "Delete", dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}, id: "delete", class: "btn btn-danger" %>
+            <% end %>
+
+            <%= link_to "Add a ingredient", new_cocktail_dose_path(@cocktail), id: "add", class: "btn btn-success" %>
+          </div>
+          <div class="col-xs-12">
+            <div class="cocktail-card" id="review" style="width: 500px;">
+              <% @cocktail.reviews.each do |review|%>
+                <p><%= review.title %> - <%= review.content %> - <%= '*' * review.rating %> </p>
+                <br>
+              <% end %>
+              <%= link_to "Add a review", new_cocktail_review_path(@cocktail), id: "add", class: "btn btn-success" %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+

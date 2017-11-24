@@ -10,15 +10,15 @@ body {
 
 </style>
 
-<div class="container" style="margin: 240px;">
+<div class="container", style="margin-top: 200px;">
   <div class="row">
-    <div class="col-xs-6 col-xs-offset-3" style= "margin-top: 60px; margin-bottom: 40px; color: white;">
-      <%= simple_form_for [@cocktail], html: {class: 'form-inline'}  do |f| %>
+    <div class="col-xs-6 col-xs-offset-3" style= "color: white;">
+      <%= simple_form_for [@cocktail] do |f| %>
         <%= f.error_notification %>
         <%= f.input :name, placeholder: "White russian", html: {style: "margin-right: 10px;"}  %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
-        <%= f.button :submit, class: "btn btn-treehouse", style: "margin-left: 200px;" %>
+        <%= f.button :submit, class: "btn btn-treehouse"%>
       <% end %>
     </div>
   </div>
