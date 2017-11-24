@@ -1,19 +1,39 @@
+<style type="text/css">
+
+.footer {
+  position: static;
+  bottom: 0;
+}
+
+
+
+</style>
+
+
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('');">
-        <div class="card-name">
-          <h2><%= @cocktail.name %></h2>
+    <div class="col-xs-6">
+      <div class="cocktail-card">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/119/716/non_2x/free-popular-alcohol-cocktails-vector.jpg" alt="Avatar" style="width: 515px;">
+        <div class="content-cocktail" style="width: 400px">
+          <h2>
+            <%= @cocktail.name %>
+          </h2>
         </div>
-      <div class="message">
-        <div class="message-body">
-          <% @cocktail.doses.each do |dose|%>
-            <%= dose.description %>
-            <%= dose.ingredient.name %>
-            <br>
-          <% end %>
-        </div>
-        <%= link_to "Add a ingredient", new_cocktail_dose_path(@cocktail) %>
       </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="cocktail-card" id="ingredient" style="width: 500px;">
+      <% @cocktail.doses.each do |dose|%>
+        <p>
+          <i class="fa fa-hand-o-right" aria-hidden="true"></i> <%= dose.ingredient.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i> <%= dose.description %>
+        </p>
+        <br>
+        <%= link_to "Delete", dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}, id: "delete", class: "btn btn-danger" %>
+      <% end %>
+      <br>
+      <%= link_to "Add a ingredient", new_cocktail_dose_path(@cocktail), id: "add", class: "btn btn-success" %>
+      </div>
+    </div>
   </div>
 </div>

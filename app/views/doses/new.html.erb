@@ -1,14 +1,22 @@
-<div class="container">
+<style type="text/css">
+
+body {
+  background-image: url('https://images1.ocweekly.com/imager/u/original/8116990/big_lebowski_13.jpg');
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+</style>
+
+<div class="container" style="margin: 140px;">
   <div class="row">
-    <div class="col-xs-3">
-      <div class="burger" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://media.giphy.com/media/11oauh2CqGIy88/giphy.gif'); width: 500px; height: 600px;">
-      </div>
-    </div>
-    <div class="col-xs-6 col-xs-offset-3" style= "margin-top: 60px; margin-bottom: 40px;">
+    <div class="col-xs-6 col-xs-offset-3" style= "margin-top: 60px; margin-bottom: 40px; color: white;">
       <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.input :ingredient_id, collection: Ingredient.all %>
         <%= f.input :description %>
-        <%= f.button :submit %>
+        <%= f.button :submit, class: "btn btn-treehouse", style: "margin-left: 200px;"  %>
       <% end %>
     </div>
   </div>

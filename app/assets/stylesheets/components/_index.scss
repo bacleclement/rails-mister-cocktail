@@ -4,8 +4,18 @@
 @import "footer";
 @import "banner";
 @import "card";
+@import "form";
+
 
 .title-home {
   padding-left: 32px;
   text-align: center;
+}
+body {
+  min-height:100%;
+  position:relative;
+}
+
+.burger {
+  background-repeat: no-repeat;
 }
