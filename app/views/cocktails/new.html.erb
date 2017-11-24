@@ -16,6 +16,8 @@ body {
       <%= simple_form_for [@cocktail], html: {class: 'form-inline'}  do |f| %>
         <%= f.error_notification %>
         <%= f.input :name, placeholder: "White russian", html: {style: "margin-right: 10px;"}  %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
         <%= f.button :submit, class: "btn btn-treehouse", style: "margin-left: 200px;" %>
       <% end %>
     </div>

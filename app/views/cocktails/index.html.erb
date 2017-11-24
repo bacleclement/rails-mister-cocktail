@@ -6,7 +6,11 @@
       <h2 class="title-home">"This is not ‘Nam. This is bowling. There are rules.”</h2>
       <% @cocktails.each do |cocktail|%>
         <div class="col-xs-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_url("#{rand(1..7)}.jpg") %>);">
+
+          <% if cocktail.photo.url %>
+
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo.url, height: 300, width: 400, crop: :fill %>')">
             <div class="card-name">
               <h2><%= cocktail.name %></h2>
             </div>
@@ -26,6 +30,32 @@
                   <% end %>
               </div>
           </div>
+
+          <% else %>
+
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('https://www.cinephilesdreamago.com/wp-content/uploads/2015/10/the-big-lebowski-freres-coen-modernists-1.jpg')">
+            <div class="card-name">
+              <h2><%= cocktail.name %></h2>
+            </div>
+            <%= link_to "", (cocktail_path(cocktail)), class: "card-link"%>
+              <div class="product">
+                  <div class="product-star"> <i class="fa fa-star"></i></div>
+                  <div class='product-count'><%= rand(0..5) %> </div>
+                  <% cocktail.ingredients do |ingredient| %>
+                    <%= ingredient.name %>
+                  <div class="">
+                    <% cocktail.doses.each do |dose|%>
+                      <%= dose.description %>
+                      <%= dose.ingredient.name %>
+                      <br>
+                    <% end %>
+                  </div>
+                  <% end %>
+              </div>
+          </div>
+
+          <% end %>
         </div>
       <% end %>
     </div>

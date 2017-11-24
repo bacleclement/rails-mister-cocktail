@@ -7,12 +7,11 @@
 
 </style>
 
-
 <div class="container">
   <div class="row">
     <div class="col-xs-6">
       <div class="cocktail-card">
-        <img src="https://static.vecteezy.com/system/resources/previews/000/119/716/non_2x/free-popular-alcohol-cocktails-vector.jpg" alt="Avatar" style="width: 515px;">
+        <%= cl_image_tag @cocktail.photo, height: 400, width: 400, crop: :fill, alt: "Avatar", style: "width: 515px;"%>
         <div class="content-cocktail" style="width: 400px">
           <h2>
             <%= @cocktail.name %>
