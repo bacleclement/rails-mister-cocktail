@@ -16,7 +16,7 @@ body {
       <%= simple_form_for [@cocktail, @review] do |f| %>
         <%= f.input :title %>
         <%= f.input :content %>
-        <%= f.input :rating %>
+        <%= f.input :rating, collection: 0..5, selected: 3 %>
         <%= f.button :submit, class: "btn btn-treehouse", style: "margin-left: 200px;"  %>
       <% end %>
     </div>

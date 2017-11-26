@@ -16,18 +16,10 @@
             </div>
             <%= link_to "", (cocktail_path(cocktail)), class: "card-link"%>
               <div class="product">
-                  <div class="product-star"> <i class="fa fa-star"></i></div>
-                  <div class='product-count'><%= rand(0..5) %> </div>
-                  <% cocktail.ingredients do |ingredient| %>
-                    <%= ingredient.name %>
-                  <div class="">
-                    <% cocktail.doses.each do |dose|%>
-                      <%= dose.description %>
-                      <%= dose.ingredient.name %>
-                      <br>
-                    <% end %>
+                  <div class="product-star">
+                    <i class="fa fa-star">
+                    </i>
                   </div>
-                  <% end %>
               </div>
           </div>
 
@@ -40,18 +32,10 @@
             </div>
             <%= link_to "", (cocktail_path(cocktail)), class: "card-link"%>
               <div class="product">
-                  <div class="product-star"> <i class="fa fa-star"></i></div>
-                  <div class='product-count'><%= rand(0..5) %> </div>
-                  <% cocktail.ingredients do |ingredient| %>
-                    <%= ingredient.name %>
-                  <div class="">
-                    <% cocktail.doses.each do |dose|%>
-                      <%= dose.description %>
-                      <%= dose.ingredient.name %>
-                      <br>
-                    <% end %>
+                  <div class="product-star">
+                    <i class="fa fa-star">
+                    </i>
                   </div>
-                  <% end %>
               </div>
           </div>
 

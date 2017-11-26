@@ -15,7 +15,7 @@ body {
     <div class="col-xs-6 col-xs-offset-3" style= "color: white;">
       <%= simple_form_for [@cocktail] do |f| %>
         <%= f.error_notification %>
-        <%= f.input :name, placeholder: "White russian", html: {style: "margin-right: 10px;"}  %>
+        <%= f.input :name, placeholder: "White russian", html: {style: "margin-right: 10px;"}, label: 'Your username please', error: 'Username is mandatory, please specify one'  %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
         <%= f.button :submit, class: "btn btn-treehouse"%>

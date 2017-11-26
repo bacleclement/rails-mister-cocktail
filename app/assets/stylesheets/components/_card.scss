@@ -15,7 +15,7 @@
 
 .card-name {
   position: absolute;
-  top: 5px;
+  top: -10px;
   left: 10px;
   font-size: 15px;
   text-transform: uppercase;
@@ -24,25 +24,6 @@
   }
 }
 
-.card-category {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-}
-
-.card-description {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-}
-.card-description h2 {
-  font-size: 20px;
-}
-.card-description p {
-  font-size: 12px;
-  opacity: 0.7;
-  font-weight: lighter;
-}
 .card-link {
   position: absolute;
   top: 0;
@@ -53,24 +34,15 @@
   background: black;
   opacity: 0;
 }
+
 .card-link:hover {
   opacity: 0.1;
-}
-
-.card-review {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-}
-
-.card-review {
-  color: white;
 }
 
 .product {
   position: absolute;
   top: 5px;
-  right:5px;
+  right:15px;
 }
 
 .cocktail-card {
